@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,5 +34,19 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+//Va por 2 vias : o si clickeamos la bolita o si movemos la imagen
+- (IBAction)changePage:(id)sender {
+    
+    self.labeltxt.text = [NSString stringWithFormat:@"%li", ([self.page currentPage]+1)];
+
+    NSString *imageName = nil;
+    imageName = [NSString stringWithFormat:@"image%lu",([self.page currentPage]+1)];
+    
+    //Fabricamos una imagen con el objeto UIImage
+    self.imageView.image = [UIImage imageNamed:imageName];
+    
+}
 
 @end

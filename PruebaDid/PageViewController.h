@@ -10,4 +10,12 @@
 
 @interface PageViewController : UIViewController
 
+
+@property (weak, nonatomic) IBOutlet UIPageControl *page;
+
+@property (weak, nonatomic) IBOutlet UILabel *labeltxt;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+- (IBAction)changePage:(id)sender;
+
 @end
